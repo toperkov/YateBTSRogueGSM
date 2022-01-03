@@ -218,5 +218,5 @@ $ sudo yate -v
  [4] https://github.com/goodboytower/GoodBTS  
  [5] https://www.nuand.com/fpga_images/  
  [6] http://yate.null.ro/tarballs/  
- [7] http://yate.null.ro/mantis/view.php?id=420
+ [7] http://yate.null.ro/mantis/view.php?id=420  
  [8] https://gist.github.com/qingxp9/a250697ad9486897c3cbe20834bd6d44
