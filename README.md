@@ -44,6 +44,47 @@ $ apt install autoconf gcc g++ make
 
 Step 5: Compile Yate
 
+```diff
+--- modules/openssl.cpp
++++ modules/openssl.cpp
+@@ -36,6 +36,10 @@
+ #include <openssl/des.h>
+ #endif
+ 
++#if OPENSSL_VERSION_NUMBER >= 0x10100000L
++#include <openssl/modes.h>
++#endif
++
+ using namespace TelEngine;
+ namespace { // anonymous
+ 
+@@ -644,6 +648,17 @@
+ 	inpData = outData;
+     unsigned int num = 0;
+     unsigned char eCountBuf[AES_BLOCK_SIZE];
++#if OPENSSL_VERSION_NUMBER >= 0x10100000L
++    CRYPTO_ctr128_encrypt(
++	(const unsigned char*)inpData,
++	(unsigned char*)outData,
++	len,
++	m_key,
++	m_initVector,
++	eCountBuf,
++	&num,
++	(block128_f)AES_encrypt);
++#else
+     AES_ctr128_encrypt(
+ 	(const unsigned char*)inpData,
+ 	(unsigned char*)outData,
+@@ -652,6 +667,7 @@
+ 	m_initVector,
+ 	eCountBuf,
+ 	&num);
++#endif
+     return true;
+ }
+```
+
 ```Linux
 $ cd /usr/src/yate
 $ ./autogen.sh
