@@ -55,6 +55,7 @@ $ ldconfig
 
 Step 6: Compile YateBTS
 
+```diff
 #This patch works for gcc6, gcc7, and is from http://yate.null.ro/mantis/view.php?id=416
 --- a/mbts/GPRS/MSInfo.cpp
 +++ b/mbts/GPRS/MSInfo.cpp
@@ -87,6 +88,7 @@ Step 6: Compile YateBTS
  	SgsnInfo *si;
  	RN_FOR_ALL(SgsnInfoList_t,sSgsnInfoList,si) {
  		// The second test here should be redundant.
+```
 
 ```Linux
 $ cd /usr/src/yate-bts
