@@ -44,7 +44,10 @@ $ apt install autoconf gcc g++ make
 
 Step 5: Compile Yate
 
+Since yate fails to build with recent openssl versions, a patch has been made that supports openssl-1.1
+
 ```diff
+#This patch works for openssl-1.1, and is from http://yate.null.ro/mantis/view.php?id=420
 --- modules/openssl.cpp
 +++ modules/openssl.cpp
 @@ -36,6 +36,10 @@
