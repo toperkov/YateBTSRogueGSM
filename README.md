@@ -35,7 +35,7 @@ Step 4: Download the custom Yate distro created by Nuand
 
 ```Linux
 $ wget https://www.nuand.com/downloads/yate-rc.tar
-$ tar xvf yate-rc.tar
+$ tar xvf yate-rc.zip
 $ mv yate /usr/src
 $ mv yatebts /usr/src
 $ mv *.rbf /usr/share/nuand/bladeRF
