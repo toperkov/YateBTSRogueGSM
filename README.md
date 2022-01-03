@@ -48,6 +48,7 @@ Since yate fails to build with recent openssl versions, a patch has been made th
 
 ```diff
 #This patch works for openssl-1.1, and is from http://yate.null.ro/mantis/view.php?id=420
+#cd /usr/src/yate
 --- modules/openssl.cpp
 +++ modules/openssl.cpp
 @@ -36,6 +36,10 @@
@@ -101,6 +102,7 @@ Step 6: Compile YateBTS
 
 ```diff
 #This patch works for gcc6, gcc7, and is from http://yate.null.ro/mantis/view.php?id=416
+#cd /usr/src/yate-bts
 --- a/mbts/GPRS/MSInfo.cpp
 +++ b/mbts/GPRS/MSInfo.cpp
 @@ -638,7 +638,7 @@
