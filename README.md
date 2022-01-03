@@ -100,6 +100,8 @@ $ ldconfig
 
 Step 6: Compile YateBTS
 
+In a similar fashion, some yate-bts cannot compile with gcc6, gcc7, so a patch has been made
+
 ```diff
 #This patch works for gcc6, gcc7, and is from http://yate.null.ro/mantis/view.php?id=416
 #cd /usr/src/yate-bts
