@@ -34,9 +34,8 @@ $ apt install libusb-1.0-0-dev
 Step 4: Download the custom Yate distro created by Nuand
 
 ```Linux
-$ wget https://github.com/toperkov/YateBTSRogueGSM/blob/main/yate-rc.tar
+$ wget https://github.com/toperkov/YateBTSRogueGSM/raw/main/yate-rc.tar
 $ tar xvf yate-rc.tar
-$ cd yate-rc
 $ mv yate /usr/src
 $ mv yate-bts /usr/src
 $ mv *.rbf /usr/share/nuand/bladeRF
