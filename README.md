@@ -1,5 +1,6 @@
-# YateBTSRogueSGM
-Rogue GSM Base Station based on YateGSM
+# Yate BTS Rogue GSM
+
+Rogue GSM Base Station based on YateGSM and BladeRF x40. These instructions were mostly inspired by recent blog from A. Knight: [Hacking GSM: Building a Rogue Base Station to Hack Cellular Devices](https://www.brierandthorn.com/post/hacking-gsm-building-a-rogue-base-station-to-hack-cellular-devices). Small patches and corrections have been made to support latest Ubuntu OS system with GCC 6/7 and OpenSSL 1.1, along with BladeRF x40 board.
 
 Step 0: Enter root mode with:
 
@@ -8,7 +9,7 @@ $ sudo su
 ```
 
 
-Step 1: Update/upgrade your fresh installation of Ubuntu. In this tutorial, I’m using Ubuntu 20.04 LTS.
+Step 1: Update/upgrade your fresh installation of Ubuntu. In this tutorial, I have been using Ubuntu 20.04 LTS.
 
 ```Linux
 $ apt update ; apt upgrade
