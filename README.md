@@ -34,10 +34,11 @@ $ apt install libusb-1.0-0-dev
 Step 4: Download the custom Yate distro created by Nuand
 
 ```Linux
-$ wget https://www.nuand.com/downloads/yate-rc.tar
-$ tar xvf yate-rc.zip
+$ wget https://github.com/toperkov/YateBTSRogueGSM/blob/main/yate-rc.tar
+$ tar xvf yate-rc.tar
+$ cd yate-rc
 $ mv yate /usr/src
-$ mv yatebts /usr/src
+$ mv yate-bts /usr/src
 $ mv *.rbf /usr/share/nuand/bladeRF
 $ apt install autoconf gcc g++ make
 ```
@@ -46,18 +47,22 @@ Step 5: Compile Yate
 
 ```Linux
 $ cd /usr/src/yate
-$ ./autogen.sh ; ./configure —-prefix=/usr/local ; make ; make install-noapi ; ldconfig
+$ ./autogen.sh
+$ ./configure —-prefix=/usr/local
+$ make
+$ make install
+$ ldconfig
 ```
 
 Step 6: Compile YateBTS
 
 ```Linux
-$ cd /usr/src/yatebts
+$ cd /usr/src/yate-bts
 $ ./autogen.sh
 $ ./configure —-prefix=/usr/local
 $ make
-$ sudo make install
-$ sudo ldconfig
+$ make install
+$ ldconfig
 ```
 
 Step 7: Set permissions
