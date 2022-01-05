@@ -220,7 +220,7 @@ Step 13: Start Yate
 $ sudo yate -v
 ```
 
-## Useful literature
+## Useful references
  [1] https://www.brierandthorn.com/post/hacking-gsm-building-a-rogue-base-station-to-hack-cellular-devices  
  [2] https://www.youtube.com/watch?v=H7n9EyN5DKs  
  [3] https://hernan.de/blog/creating-a-cellular-testbed-with-yatebts-and-srslte/  
