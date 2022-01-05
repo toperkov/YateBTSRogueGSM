@@ -18,7 +18,16 @@ $ apt update ; apt upgrade
 Step 2: Add BladeRF PPA and install BladeRF tools and libbladeRF
 
 ```Linux
+# Ubuntu 18.04
 $ add-apt-repository ppa:bladerf/bladerf
+```
+
+```Linux
+# Ubuntu 20.04.3 LTS
+$ add-apt-repository ppa:nuandllc/bladerf
+```
+
+```Linux
 $ apt-get update
 $ apt-get install bladerf
 $ apt-get install libbladerf-dev
@@ -184,8 +193,8 @@ Step 10: Install Network-in-a-PC
 
 ```Linux
 $ cd /var/www/html
-$ ln -s /usr/local/etc/yate/nipc_web nipc
-$ chmod -R a+rw /usr/local/etc/yate
+$ ln -s /usr/local/share/yate/nipc_web nipc
+$ chmod -R a+rw /usr/local/share/yate
 $ /etc/init.d/apache2 start
 ```
 
